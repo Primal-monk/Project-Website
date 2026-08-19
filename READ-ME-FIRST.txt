@@ -1,0 +1,71 @@
+================================================================
+  PHAROAH / PICODEV / OSIRIS  -  WEBSITE UPLOAD FOLDER
+================================================================
+
+This folder is the FINISHED website. Nothing else is needed.
+Every image, page and file it references is already in here.
+
+----------------------------------------------------------------
+HOW TO PUBLISH (GitHub Pages)
+----------------------------------------------------------------
+1. Go to your repo on github.com  ->  "Add file"  ->  "Upload files"
+2. Drag in the CONTENTS of this folder (all 7 files + the
+   assets folder + .nojekyll)  --  NOT the folder itself.
+   ( If you drag the folder itself, the site ends up at
+     yoursite.com/WEBSITE-UPLOAD/ instead of yoursite.com/ )
+3. Commit.
+4. Repo Settings -> Pages -> Source: "Deploy from a branch",
+   Branch: main,  Folder: / (root).  Save.
+5. Wait ~1 minute. Site is live.
+
+If you use a drag-and-drop host (Netlify Drop, itch.io, etc.)
+then you CAN just drop this whole folder in -- those hosts
+treat the dropped folder as the site root.
+
+----------------------------------------------------------------
+WHAT'S IN HERE
+----------------------------------------------------------------
+index.html      PHAROAH        <- this is the site's front page
+talents.html    4th Talents    (272 talents, video + guide + list)
+osiris.html     OSIRIS         (modding software division)
+horus.html      HORUS          (Smite mod)
+primal.html     PICODEV        (games division)
+omni.html       ANGELCORP      (parent org / 20% charity concept)
+talents.txt     the raw talent list, offered as a download
+assets/         42 images -- every one is used by a page
+.nojekyll       tells GitHub Pages not to run Jekyll on the files
+
+----------------------------------------------------------------
+HOW THE PAGES LINK TOGETHER
+----------------------------------------------------------------
+                    omni.html  (ANGELCORP)
+                     /                \
+            primal.html            osiris.html
+            (PICODEV)          (OSIRIS)
+                                   /        \
+                          index.html      horus.html
+                          (PHAROAH)       (HORUS)
+                              |
+                         talents.html
+                        (4th Talents)
+
+  index.html  <-->  talents.html  are joined by the
+  BASE / 4TH TALENTS switcher under each header.
+
+----------------------------------------------------------------
+ONE THING TO DECIDE
+----------------------------------------------------------------
+Right now the FRONT PAGE of the site is PHAROAH (index.html).
+Visitors landing on your bare domain see PHAROAH first.
+
+If you'd rather they land on PICODEV or ANGELCORP instead,
+that's a rename job -- say the word and it gets done properly
+(all the internal links have to be repointed at the same time,
+so don't just rename the files by hand or the nav will break).
+
+----------------------------------------------------------------
+IF YOU EDIT SOMETHING LATER
+----------------------------------------------------------------
+The working copies live in  ..\PHAROAH-WEBSITE\
+Edit there, then this folder gets rebuilt from it.
+Don't edit in two places at once.
